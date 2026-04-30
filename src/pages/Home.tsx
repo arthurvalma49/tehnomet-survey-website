@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Ship, Clock, Award, Globe2, ShieldCheck, Gauge } from "lucide-react";
+import { ArrowRight, Ship, Clock, Award, Globe2 } from "lucide-react";
 import ClassSocietiesStrip from "@/components/ClassSocietiesStrip";
 import heroVessel from "@/assets/hero-vessel.jpg";
 import inspectorWork from "@/assets/inspector-work.jpg";
