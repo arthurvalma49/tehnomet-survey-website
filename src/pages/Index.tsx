@@ -1,10 +1,5 @@
 import Home from "./Home";
-import SiteLayout from "@/components/SiteLayout";
 
-const Index = () => (
-  <SiteLayout>
-    <Home />
-  </SiteLayout>
-);
+const Index = () => <Home />;
 
 export default Index;
