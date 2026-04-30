@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
@@ -16,7 +16,6 @@ const languages = ["EN", "RU", "中文"] as const;
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [lang, setLang] = useState<(typeof languages)[number]>("EN");
-  const location = useLocation();
 
   return (
     <header className="sticky top-0 z-50 bg-background shadow-card-pro">
