@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-white-clean.png";
 
 export default function SiteFooter() {
   return (
     <footer className="bg-primary-deep text-white/80 border-t-[3px] border-brand-red mt-auto">
       <div className="container-pro py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="" width={40} height={40} className="w-10 h-10 object-contain" loading="lazy" />
-            <div>
-              <div className="text-white font-extrabold tracking-tight">TEHNOMET SURVEY</div>
-              <div className="text-[11px] text-white/60">Ship Repair &amp; Hull Inspection · OÜ</div>
-            </div>
+          <div className="mb-5">
+            <img src={logo} alt="Tehnomet Survey — BLRT Grupp" width={180} height={64} className="h-14 w-auto object-contain" loading="lazy" />
           </div>
           <p className="text-sm leading-relaxed text-white/65 max-w-xs">
             Be Aware. Be Confident. Be Safe. Marine vessel inspection trusted by ship owners worldwide since 1998.
