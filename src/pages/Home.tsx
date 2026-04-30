@@ -1,32 +1,34 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Ship, Clock, Award, Globe2, ShieldCheck, Gauge } from "lucide-react";
+import { ArrowRight, Ship, Clock, Award, Globe2 } from "lucide-react";
 import ClassSocietiesStrip from "@/components/ClassSocietiesStrip";
+import heroVessel from "@/assets/hero-vessel.jpg";
+import inspectorWork from "@/assets/inspector-work.jpg";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-navy text-white overflow-hidden">
-        {/* Decorative subtle grid */}
-        <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true" style={{
-          backgroundImage: 'linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }} />
-        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-brand-red/15 blur-3xl" aria-hidden="true" />
-        <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-primary-light/30 blur-3xl" aria-hidden="true" />
+      <section className="relative bg-primary-deep text-white overflow-hidden">
+        <img
+          src={heroVessel}
+          alt="Commercial cargo vessel in dry dock undergoing inspection"
+          width={1920}
+          height={1088}
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/85 to-primary-deep/40" aria-hidden="true" />
 
         <div className="container-pro relative py-24 lg:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">
-              <span className="w-2 h-2 rounded-full bg-success animate-pulse" /> Marine Inspection · Since 1998
+              Marine Inspection · Since 1998
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] mb-6">
-              Be Aware.<br />
-              Be Confident.<br />
-              <span className="text-brand-red">Be Safe.</span>
+              Independent ship hull<br />
+              inspection, <span className="text-brand-red">worldwide.</span>
             </h1>
-            <p className="text-lg lg:text-xl text-white/75 max-w-2xl mb-10 leading-relaxed">
-              Independent ship hull inspection and non-destructive testing for fleet operators worldwide. Certified technicians on a vessel within 24 hours, anywhere.
+            <p className="text-lg lg:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
+              Non-destructive testing, ultrasonic thickness measurement and steel renewal supervision for fleet operators. Certified technicians mobilised to any port within 24 hours.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contacts" className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-hover text-white font-bold px-7 py-4 rounded-md shadow-red transition-colors">
@@ -86,23 +88,15 @@ export default function Home() {
             </Link>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-navy rounded-lg transform translate-x-4 translate-y-4" aria-hidden="true" />
-            <div className="relative bg-surface border border-border rounded-lg p-8 lg:p-10 grid grid-cols-2 gap-6">
-              {[
-                { icon: ShieldCheck, title: "Certified", text: "All technicians fully certified to international standards" },
-                { icon: Clock, title: "24/7 Ready", text: "Rapid mobilisation, any port, any time zone" },
-                { icon: Award, title: "27 Years", text: "Trusted by major fleet operators since 1998" },
-                { icon: Gauge, title: "Independent", text: "Impartial third-party inspection reports" },
-              ].map((c, i) => (
-                <div key={i}>
-                  <div className="w-10 h-10 rounded-md bg-brand-red/10 flex items-center justify-center mb-3">
-                    <c.icon className="w-5 h-5 text-brand-red" />
-                  </div>
-                  <div className="font-bold text-primary mb-1">{c.title}</div>
-                  <div className="text-sm text-muted-foreground leading-relaxed">{c.text}</div>
-                </div>
-              ))}
-            </div>
+            <div className="absolute -inset-4 bg-brand-red/10 rounded-lg" aria-hidden="true" />
+            <img
+              src={inspectorWork}
+              alt="Certified technician performing ultrasonic thickness measurement on a vessel hull"
+              width={1280}
+              height={896}
+              loading="lazy"
+              className="relative rounded-lg w-full h-full object-cover aspect-[4/3] shadow-elevated"
+            />
           </div>
         </div>
       </section>
