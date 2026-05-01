@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-navy.png";
+import logo from "@/assets/logo-symbol.png";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -20,15 +20,23 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-background shadow-card-pro">
       {/* Main nav */}
-      <div className="container-pro flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center" aria-label="Tehnomet Survey home">
+      <div className="container-pro flex items-center justify-between h-24">
+        <Link to="/" className="flex items-center gap-3" aria-label="Tehnomet Survey home">
           <img
             src={logo}
             alt="Tehnomet Survey — BLRT Grupp"
-            width={180}
-            height={56}
-            className="h-12 w-auto object-contain"
+            width={80}
+            height={80}
+            className="h-16 w-auto object-contain"
           />
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-extrabold text-primary tracking-tight">
+              TEHNOMET SURVEY
+            </span>
+            <span className="text-[11px] font-semibold text-muted-foreground tracking-widest uppercase">
+              BLRT Grupp
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
