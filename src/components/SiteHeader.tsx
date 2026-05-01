@@ -21,13 +21,13 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 bg-background shadow-card-pro">
       {/* Main nav */}
       <div className="container-pro flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3" aria-label="Tehnomet Survey home">
+        <Link to="/" className="flex items-center gap-3 py-2" aria-label="Tehnomet Survey home">
           <img
             src={logo}
             alt="Tehnomet Survey — BLRT Grupp"
-            width={64}
-            height={64}
-            className="h-16 w-16 object-contain bg-transparent"
+            width={44}
+            height={44}
+            className="h-11 w-11 object-contain bg-transparent"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-xl font-extrabold text-primary tracking-tight">
