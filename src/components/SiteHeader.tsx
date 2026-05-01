@@ -20,20 +20,20 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-background shadow-card-pro">
       {/* Main nav */}
-      <div className="container-pro flex items-center justify-between h-24">
-        <Link to="/" className="flex items-center gap-3" aria-label="Tehnomet Survey home">
+      <div className="container-pro flex items-center justify-between h-32">
+        <Link to="/" className="flex items-center gap-4" aria-label="Tehnomet Survey home">
           <img
             src={logo}
             alt="Tehnomet Survey — BLRT Grupp"
-            width={80}
-            height={80}
-            className="h-16 w-auto object-contain"
+            width={120}
+            height={120}
+            className="h-24 w-auto object-contain"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-xl font-extrabold text-primary tracking-tight">
+            <span className="text-3xl font-extrabold text-primary tracking-tight">
               TEHNOMET SURVEY
             </span>
-            <span className="text-[11px] font-semibold text-muted-foreground tracking-widest uppercase">
+            <span className="text-sm font-semibold text-muted-foreground tracking-widest uppercase">
               BLRT Grupp
             </span>
           </div>
