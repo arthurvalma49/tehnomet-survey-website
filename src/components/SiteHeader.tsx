@@ -25,9 +25,9 @@ export default function SiteHeader() {
           <img
             src={logo}
             alt="Tehnomet Survey — BLRT Grupp"
-            width={120}
-            height={120}
-            className="h-24 w-auto object-contain bg-transparent"
+            width={64}
+            height={64}
+            className="h-16 w-16 object-contain bg-transparent"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-xl font-extrabold text-primary tracking-tight">
