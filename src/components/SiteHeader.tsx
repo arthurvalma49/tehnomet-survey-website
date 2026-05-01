@@ -27,7 +27,7 @@ export default function SiteHeader() {
             alt="Tehnomet Survey — BLRT Grupp"
             width={120}
             height={120}
-            className="h-24 w-auto object-contain"
+            className="h-24 w-auto object-contain bg-transparent"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-xl font-extrabold text-primary tracking-tight">
