@@ -2,23 +2,23 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-symbol.png";
-
-const navItems = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/activities", label: "Activities" },
-  { to: "/contacts", label: "Contacts" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const languages = ["EN", "RU"] as const;
 
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [lang, setLang] = useState<(typeof languages)[number]>("EN");
+  const { lang, setLang, t } = useLanguage();
+
+  const navItems = [
+    { to: "/", label: t("nav.home") },
+    { to: "/about", label: t("nav.about") },
+    { to: "/activities", label: t("nav.activities") },
+    { to: "/contacts", label: t("nav.contacts") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-background shadow-card-pro">
-      {/* Main nav */}
       <div className="container-pro flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3 py-2" aria-label="Tehnomet Survey home">
           <img
@@ -73,7 +73,7 @@ export default function SiteHeader() {
             to="/contacts"
             className="bg-brand-red hover:bg-brand-red-hover text-white text-sm font-bold px-5 py-2.5 rounded-md transition-colors shadow-red"
           >
-            Request a Survey
+            {t("nav.requestSurvey")}
           </Link>
         </div>
 
@@ -123,7 +123,7 @@ export default function SiteHeader() {
                 onClick={() => setMobileOpen(false)}
                 className="ml-auto bg-brand-red text-white text-sm font-bold px-4 py-2 rounded-md"
               >
-                Request a Survey
+                {t("nav.requestSurvey")}
               </Link>
             </div>
           </nav>

@@ -3,8 +3,11 @@ import { ArrowRight, Ship, Clock, Award, Globe2 } from "lucide-react";
 import ClassSocietiesStrip from "@/components/ClassSocietiesStrip";
 import heroVessel from "@/assets/hero-vessel.jpg";
 import inspectorWork from "@/assets/inspector-work.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* Hero */}
@@ -21,21 +24,21 @@ export default function Home() {
         <div className="container-pro relative py-24 lg:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">
-              Marine Inspection · Since 1998
+              {t("home.badge")}
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] mb-6">
-              Independent ship hull<br />
-              inspection, <span className="text-brand-red">worldwide.</span>
+              {t("home.heroTitle1")}<br />
+              {t("home.heroTitle2")}<span className="text-brand-red">{t("home.heroTitle3")}</span>
             </h1>
             <p className="text-lg lg:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
-              Non-destructive testing, ultrasonic thickness measurement and steel renewal supervision for fleet operators. Certified technicians mobilised to any port within 24 hours.
+              {t("home.heroDesc")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contacts" className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-hover text-white font-bold px-7 py-4 rounded-md shadow-red transition-colors">
-                Request a Survey <ArrowRight className="w-4 h-4" />
+                {t("nav.requestSurvey")} <ArrowRight className="w-4 h-4" />
               </Link>
               <Link to="/activities" className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-bold px-7 py-4 rounded-md transition-colors">
-                View Activities
+                {t("home.viewActivities")}
               </Link>
             </div>
           </div>
@@ -48,10 +51,10 @@ export default function Home() {
       <section className="bg-background border-b border-border">
         <div className="container-pro grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-border">
           {[
-            { icon: Ship, value: "300+", label: "Vessels inspected per year" },
-            { icon: Clock, value: "24/7", label: "Mobilisation availability" },
-            { icon: Award, value: "27", label: "Years of experience" },
-            { icon: Globe2, value: "Worldwide", label: "Operational coverage" },
+            { icon: Ship, value: "300+", label: t("home.stat.vessels") },
+            { icon: Clock, value: "24/7", label: t("home.stat.mobilisation") },
+            { icon: Award, value: "27", label: t("home.stat.experience") },
+            { icon: Globe2, value: t("home.stat.worldwide"), label: t("home.stat.coverage") },
           ].map((s, i) => (
             <div key={i} className="py-10 px-6 flex items-center gap-5">
               <div className="w-14 h-14 rounded-md bg-primary/5 flex items-center justify-center shrink-0">
@@ -70,21 +73,21 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container-pro grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">About Us</p>
+            <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">{t("home.aboutLabel")}</p>
             <h2 className="text-3xl lg:text-4xl mb-6 heading-underline">
-              Trusted partner in marine vessel inspection
+              {t("home.aboutTitle")}
             </h2>
             <p className="text-base text-foreground/80 leading-relaxed mb-4">
-              Tehnomet Survey is an actively developing service company operating in the field of ship repair and inspection of hull structures of marine vessels. Founded in 1998, we are part of the BLRT Grupp and operate worldwide.
+              {t("home.aboutP1")}
             </p>
             <p className="text-base text-foreground/80 leading-relaxed mb-8">
-              Our technicians hold all necessary documents to be mobilised on short notice and arrive on a spot as per client's request — wherever the vessel is located.
+              {t("home.aboutP2")}
             </p>
             <Link
               to="/about"
               className="inline-flex items-center gap-2 border-2 border-brand-red text-brand-red font-bold px-6 py-3 rounded-md hover:bg-brand-red hover:text-white transition-colors"
             >
-              Read More <ArrowRight className="w-4 h-4" />
+              {t("home.readMore")} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="relative">
@@ -105,24 +108,24 @@ export default function Home() {
       <section className="py-24 bg-surface">
         <div className="container-pro">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">Activities</p>
-            <h2 className="text-3xl lg:text-4xl heading-underline-center">Our Core Services</h2>
+            <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">{t("home.activitiesLabel")}</p>
+            <h2 className="text-3xl lg:text-4xl heading-underline-center">{t("home.activitiesTitle")}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Non-Destructive Testing (NDT)",
-                desc: "Hull and weld inspection without interrupting vessel operations. UT, MT, PT, VT, RT and ET methods performed by certified technicians.",
+                title: t("home.ndt.title"),
+                desc: t("home.ndt.desc"),
                 tag: "NDT",
               },
               {
-                title: "UTM & Steel Supervision",
-                desc: "Ultrasonic thickness measurement, corrosion monitoring, structural integrity assessment and class survey support.",
+                title: t("home.utm.title"),
+                desc: t("home.utm.desc"),
                 tag: "UTM",
               },
             ].map((a) => (
               <Link
-                key={a.title}
+                key={a.tag}
                 to="/activities"
                 className="group relative bg-background border border-border rounded-lg p-8 hover:border-brand-red hover:shadow-elevated transition-all"
               >
