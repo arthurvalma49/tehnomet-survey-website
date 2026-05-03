@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Activities from "./pages/Activities";
 import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
