@@ -1,5 +1,4 @@
-// Class society wordmark-style SVG badges (no external assets, no copyrighted logos —
-// generic typographic representations that read clearly on a navy background).
+import { useLanguage } from "@/i18n/LanguageContext";
 
 type Society = { name: string; abbr: string };
 const societies: Society[] = [
@@ -13,12 +12,14 @@ const societies: Society[] = [
 ];
 
 export default function ClassSocietiesStrip() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-primary-deep border-y border-white/5">
       <div className="container-pro py-8">
         <div className="text-center mb-6">
           <p className="text-xs uppercase tracking-[0.25em] font-bold text-white/55">
-            Accepted by all major classification societies
+            {t("class.accepted")}
           </p>
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center">

@@ -1,37 +1,34 @@
 import { Link } from "react-router-dom";
 import { Building2, Ship, Clock, Award, Globe2, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section className="bg-gradient-navy text-white py-20">
         <div className="container-pro">
-          <p className="text-xs uppercase tracking-[0.3em] font-bold text-brand-red mb-4">About Us</p>
-          <h1 className="text-4xl lg:text-5xl text-white max-w-3xl">A quarter century of marine inspection expertise.</h1>
+          <p className="text-xs uppercase tracking-[0.3em] font-bold text-brand-red mb-4">{t("about.label")}</p>
+          <h1 className="text-4xl lg:text-5xl text-white max-w-3xl">{t("about.heroTitle")}</h1>
         </div>
       </section>
 
       <section className="py-20 bg-background">
         <div className="container-pro grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-6 text-foreground/85 leading-relaxed">
-            <h2 className="text-2xl lg:text-3xl heading-underline">Our Story</h2>
-            <p>
-              Tehnomet Survey is an actively developing service company, operating in the field of ship repair and inspection of hull structures of marine vessels, founded in 1998. We operate worldwide.
-            </p>
-            <p>
-              Our technicians have all the necessary documents to be mobilized on a short notice and arrive on a spot as per client's request, wherever vessel is located. Over more than two decades we have built lasting relationships with ship owners, fleet operators, port agents and procurement managers across Europe, the Middle East and Asia-Pacific.
-            </p>
-            <p>
-              We perform our work in close cooperation with all major classification societies, ensuring every report and certificate we produce is accepted globally. Independence and technical rigour are at the core of how we operate.
-            </p>
+            <h2 className="text-2xl lg:text-3xl heading-underline">{t("about.ourStory")}</h2>
+            <p>{t("about.storyP1")}</p>
+            <p>{t("about.storyP2")}</p>
+            <p>{t("about.storyP3")}</p>
           </div>
 
           <aside className="space-y-4">
             {[
-              { v: "300+", l: "Vessels per year" },
-              { v: "24/7", l: "Availability" },
-              { v: "27", l: "Years experience" },
-              { v: "Worldwide", l: "Coverage" },
+              { v: "300+", l: t("about.stat.vessels") },
+              { v: "24/7", l: t("about.stat.availability") },
+              { v: "27", l: t("about.stat.experience") },
+              { v: t("about.stat.worldwide"), l: t("about.stat.coverage") },
             ].map((s) => (
               <div key={s.l} className="bg-surface border-l-4 border-brand-red p-5 rounded-r-md">
                 <div className="text-3xl font-extrabold text-primary leading-none">{s.v}</div>
@@ -47,22 +44,22 @@ export default function About() {
           <div>
             <div className="inline-flex items-center gap-2 mb-5">
               <Building2 className="w-5 h-5 text-brand-red" />
-              <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red">Parent Company</span>
+              <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red">{t("about.parentLabel")}</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl mb-6 heading-underline">Part of BLRT Grupp</h2>
+            <h2 className="text-3xl lg:text-4xl mb-6 heading-underline">{t("about.parentTitle")}</h2>
             <p className="text-foreground/80 leading-relaxed mb-4">
-              Tehnomet Survey is part of <strong className="text-primary">BLRT Grupp</strong>, one of the largest industrial holding companies in the Baltic region with deep roots in shipbuilding, ship repair and maritime services.
+              {t("about.parentP1")}
             </p>
             <p className="text-foreground/80 leading-relaxed">
-              Through BLRT Grupp we have access to extensive shipyard infrastructure, engineering expertise and a network of maritime specialists — strengths we bring to every inspection contract.
+              {t("about.parentP2")}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: Ship, t: "Shipyard heritage" },
-              { icon: Award, t: "Industrial scale" },
-              { icon: Globe2, t: "Baltic region leader" },
-              { icon: Clock, t: "Decades of trust" },
+              { icon: Ship, t: t("about.card.shipyard") },
+              { icon: Award, t: t("about.card.industrial") },
+              { icon: Globe2, t: t("about.card.baltic") },
+              { icon: Clock, t: t("about.card.decades") },
             ].map((b, i) => (
               <div key={i} className="bg-background border border-border rounded-lg p-6">
                 <div className="w-11 h-11 bg-primary/5 rounded-md flex items-center justify-center mb-3">
@@ -78,11 +75,11 @@ export default function About() {
       <section className="py-16 bg-primary-deep text-white">
         <div className="container-pro flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl text-white mb-2">Need an inspection arranged?</h3>
-            <p className="text-white/70">Talk to our team — response within hours, mobilisation within 24h.</p>
+            <h3 className="text-2xl text-white mb-2">{t("about.ctaTitle")}</h3>
+            <p className="text-white/70">{t("about.ctaDesc")}</p>
           </div>
           <Link to="/contacts" className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-hover text-white font-bold px-7 py-4 rounded-md shadow-red whitespace-nowrap">
-            Request a Survey <ArrowRight className="w-4 h-4" />
+            {t("nav.requestSurvey")} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
