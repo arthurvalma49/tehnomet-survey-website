@@ -7,7 +7,6 @@ import SiteLayout from "@/components/SiteLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Activities from "./pages/Activities";
-import GlobalReach from "./pages/GlobalReach";
 import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -24,7 +23,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/activities" element={<Activities />} />
-            <Route path="/global-reach" element={<GlobalReach />} />
+            
             <Route path="/contacts" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
