@@ -18,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <SiteLayout>
           <Routes>
             <Route path="/" element={<Home />} />
