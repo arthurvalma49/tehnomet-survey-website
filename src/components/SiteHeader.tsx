@@ -7,7 +7,6 @@ const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/activities", label: "Activities" },
-  { to: "/global-reach", label: "Global Reach" },
   { to: "/contacts", label: "Contacts" },
 ];
 
