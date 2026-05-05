@@ -11,7 +11,7 @@ export default function SiteFooter() {
       <div className="container-pro py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="mb-5">
-            <img src={logo} alt="Tehnomet Survey — BLRT Grupp" width={180} height={64} className="h-14 w-auto object-contain brightness-0 invert" loading="lazy" />
+            <img src={logo} alt="Tehnomet Survey — BLRT Grupp" width={180} height={64} className="h-14 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} loading="lazy" />
           </div>
           <p className="text-sm leading-relaxed text-white/65 max-w-xs">
             {t("footer.tagline")}
