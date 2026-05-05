@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Activities from "./pages/Activities";
 import Contacts from "./pages/Contacts";
+import OurValues from "./pages/OurValues";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/contacts" element={<Contacts />} />
+              <Route path="/our-values" element={<OurValues />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </SiteLayout>
