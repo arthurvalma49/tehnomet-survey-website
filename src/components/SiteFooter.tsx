@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo-white-clean.png";
+import logo from "@/assets/logo-navy.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function SiteFooter() {
