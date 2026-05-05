@@ -14,6 +14,7 @@ export default function SiteHeader() {
     { to: "/", label: t("nav.home") },
     { to: "/about", label: t("nav.about") },
     { to: "/activities", label: t("nav.activities") },
+    { to: "/our-values", label: t("nav.values") },
     { to: "/contacts", label: t("nav.contacts") },
   ];
 
