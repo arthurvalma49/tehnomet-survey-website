@@ -53,12 +53,12 @@ export default function OurValues() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground py-20 lg:py-28">
-        <div className="container-pro text-center max-w-3xl mx-auto">
-          <span className="inline-block text-xs font-bold tracking-widest uppercase bg-white/10 px-3 py-1 rounded-full mb-6">
+      <section className="bg-gradient-navy text-white py-20">
+        <div className="container-pro">
+          <p className="text-xs uppercase tracking-[0.3em] font-bold text-brand-red mb-4">
             {t("values.label")}
-          </span>
-          <h1 className="text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          </p>
+          <h1 className="text-4xl lg:text-5xl text-white max-w-3xl">
             {t("values.heroTitle")}
           </h1>
         </div>
