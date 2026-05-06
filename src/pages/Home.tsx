@@ -21,12 +21,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/85 to-primary-deep/40" aria-hidden="true" />
 
-        <div className="container-pro relative py-24 lg:py-32">
+        <div className="container-pro relative py-16 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">
               {t("home.badge")}
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] mb-6">
               {t("home.heroTitle1")}<br />
               {t("home.heroTitle2")}<span className="text-brand-red">{t("home.heroTitle3")}</span>
             </h1>
@@ -56,13 +56,13 @@ export default function Home() {
             { icon: Award, value: "27", label: t("home.stat.experience") },
             { icon: Globe2, value: t("home.stat.worldwide"), label: t("home.stat.coverage") },
           ].map((s, i) => (
-            <div key={i} className="py-10 px-6 flex items-center gap-5">
-              <div className="w-14 h-14 rounded-md bg-primary/5 flex items-center justify-center shrink-0">
-                <s.icon className="w-7 h-7 text-brand-red" />
+            <div key={i} className="py-6 sm:py-10 px-3 sm:px-6 flex items-center gap-3 sm:gap-5">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-md bg-primary/5 flex items-center justify-center shrink-0">
+                <s.icon className="w-5 h-5 sm:w-7 sm:h-7 text-brand-red" />
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-primary leading-none">{s.value}</div>
-                <div className="text-sm text-muted-foreground mt-1.5 font-medium">{s.label}</div>
+                <div className="text-xl sm:text-3xl font-extrabold text-primary leading-none">{s.value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mt-1 sm:mt-1.5 font-medium">{s.label}</div>
               </div>
             </div>
           ))}
@@ -70,11 +70,11 @@ export default function Home() {
       </section>
 
       {/* About preview */}
-      <section className="py-24 bg-background">
+      <section className="py-14 sm:py-24 bg-background">
         <div className="container-pro grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">{t("home.aboutLabel")}</p>
-            <h2 className="text-3xl lg:text-4xl mb-6 heading-underline">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-6 heading-underline">
               {t("home.aboutTitle")}
             </h2>
             <p className="text-base text-foreground/80 leading-relaxed mb-4">
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Activities preview */}
-      <section className="py-24 bg-surface">
+      <section className="py-14 sm:py-24 bg-surface">
         <div className="container-pro">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-sm uppercase tracking-[0.25em] font-bold text-brand-red mb-4">{t("home.activitiesLabel")}</p>
