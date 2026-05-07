@@ -1,6 +1,57 @@
 import { useState } from "react";
-import { Waves, Magnet, Droplets, Eye, Zap, CircuitBoard, Ruler, AlertTriangle, FileCheck, FileText, Clock, ShieldCheck, BadgeCheck } from "lucide-react";
+import { Waves, Magnet, Droplets, Eye, Zap, CircuitBoard, Ruler, AlertTriangle, FileText, Anchor, Clock, ShieldCheck, BadgeCheck, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { TranslationKey } from "@/i18n/translations";
+
+function ExpandableCard({ icon: Icon, abbr, title, desc, fullText }: {
+  icon: React.ElementType;
+  abbr: string;
+  title: string;
+  desc: string;
+  fullText?: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const { t } = useLanguage();
+
+  return (
+    <div className="group bg-surface border border-border rounded-lg p-6 hover:border-brand-red hover:bg-background hover:shadow-elevated transition-all flex flex-col">
+      <div className="flex items-center justify-between mb-4">
+        <div className="w-11 h-11 rounded-md bg-primary/5 group-hover:bg-brand-red/10 flex items-center justify-center transition-colors">
+          <Icon className="w-5 h-5 text-brand-red" />
+        </div>
+        <span className="text-xs font-extrabold tracking-widest text-brand-red bg-brand-red/10 px-2 py-1 rounded">
+          {abbr}
+        </span>
+      </div>
+      <h3 className="text-base mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+      {fullText && (
+        <>
+          <div
+            className={`overflow-hidden transition-all duration-300 ${
+              expanded ? "max-h-[1000px] opacity-100 mt-3" : "max-h-0 opacity-0"
+            }`}
+          >
+            {fullText.split("\n\n").map((para, i) => (
+              <p key={i} className="text-sm text-muted-foreground leading-relaxed mb-2 last:mb-0">
+                {para}
+              </p>
+            ))}
+          </div>
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-red hover:text-brand-red/80 transition-colors self-start"
+          >
+            {expanded ? t("activities.readLess") : t("activities.readMore")}
+            <ChevronDown
+              className={`w-4 h-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+            />
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function Activities() {
   const { t } = useLanguage();
@@ -12,12 +63,12 @@ export default function Activities() {
       short: "NDT",
       intro: t("activities.ndt.intro"),
       methods: [
-        { icon: Waves, abbr: "UT", title: t("activities.ut.title"), desc: t("activities.ut.desc") },
-        { icon: Magnet, abbr: "MT", title: t("activities.mt.title"), desc: t("activities.mt.desc") },
-        { icon: Droplets, abbr: "PT", title: t("activities.pt.title"), desc: t("activities.pt.desc") },
-        { icon: Eye, abbr: "VT", title: t("activities.vt.title"), desc: t("activities.vt.desc") },
-        { icon: Zap, abbr: "RT", title: t("activities.rt.title"), desc: t("activities.rt.desc") },
-        { icon: CircuitBoard, abbr: "ET", title: t("activities.et.title"), desc: t("activities.et.desc") },
+        { icon: Waves, abbr: "UT", title: t("activities.ut.title"), desc: t("activities.ut.desc"), fullText: t("activities.ut.full" as TranslationKey) },
+        { icon: Magnet, abbr: "MT", title: t("activities.mt.title"), desc: t("activities.mt.desc"), fullText: t("activities.mt.full" as TranslationKey) },
+        { icon: Droplets, abbr: "PT", title: t("activities.pt.title"), desc: t("activities.pt.desc"), fullText: t("activities.pt.full" as TranslationKey) },
+        { icon: Eye, abbr: "VT", title: t("activities.vt.title"), desc: t("activities.vt.desc"), fullText: t("activities.vt.full" as TranslationKey) },
+        { icon: Zap, abbr: "RT", title: t("activities.rt.title"), desc: t("activities.rt.desc"), fullText: t("activities.rt.full" as TranslationKey) },
+        { icon: CircuitBoard, abbr: "ET", title: t("activities.et.title"), desc: t("activities.et.desc"), fullText: t("activities.et.full" as TranslationKey) },
       ],
     },
     {
@@ -26,10 +77,10 @@ export default function Activities() {
       short: "UTM",
       intro: t("activities.utm.intro"),
       methods: [
-        { icon: Ruler, abbr: "UTM", title: t("activities.utm.thicknessTitle"), desc: t("activities.utm.thicknessDesc") },
-        { icon: AlertTriangle, abbr: "CML", title: t("activities.utm.corrosionTitle"), desc: t("activities.utm.corrosionDesc") },
-        { icon: FileCheck, abbr: "IACS", title: t("activities.utm.classTitle"), desc: t("activities.utm.classDesc") },
-        { icon: FileText, abbr: "DOC", title: t("activities.utm.repairTitle"), desc: t("activities.utm.repairDesc") },
+        { icon: Ruler, abbr: "UTM", title: t("activities.utm.utmTitle" as TranslationKey), desc: t("activities.utm.utmDesc" as TranslationKey), fullText: t("activities.utm.utmFull" as TranslationKey) },
+        { icon: FileText, abbr: "RSC", title: t("activities.utm.repairTitle"), desc: t("activities.utm.repairDesc" as TranslationKey), fullText: t("activities.utm.repairFull" as TranslationKey) },
+        { icon: AlertTriangle, abbr: "PCD", title: t("activities.utm.pittingTitle" as TranslationKey), desc: t("activities.utm.pittingDesc" as TranslationKey), fullText: t("activities.utm.pittingFull" as TranslationKey) },
+        { icon: Anchor, abbr: "ACC", title: t("activities.utm.anchorTitle" as TranslationKey), desc: t("activities.utm.anchorDesc" as TranslationKey), fullText: t("activities.utm.anchorFull" as TranslationKey) },
       ],
     },
   ];
@@ -70,20 +121,16 @@ export default function Activities() {
               <p className="text-foreground/80 leading-relaxed">{tab.intro}</p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid sm:grid-cols-2 gap-5">
               {tab.methods.map((m) => (
-                <div key={m.abbr} className="group bg-surface border border-border rounded-lg p-6 hover:border-brand-red hover:bg-background hover:shadow-elevated transition-all">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-md bg-primary/5 group-hover:bg-brand-red/10 flex items-center justify-center transition-colors">
-                      <m.icon className="w-5 h-5 text-brand-red" />
-                    </div>
-                    <span className="text-xs font-extrabold tracking-widest text-brand-red bg-brand-red/10 px-2 py-1 rounded">
-                      {m.abbr}
-                    </span>
-                  </div>
-                  <h3 className="text-base mb-2">{m.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
-                </div>
+                <ExpandableCard
+                  key={m.abbr}
+                  icon={m.icon}
+                  abbr={m.abbr}
+                  title={m.title}
+                  desc={m.desc}
+                  fullText={m.fullText}
+                />
               ))}
             </div>
           </div>

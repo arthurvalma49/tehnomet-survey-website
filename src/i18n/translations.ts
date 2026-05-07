@@ -107,26 +107,74 @@ const translations = {
     EN: "Ultrasonic thickness measurement, corrosion monitoring and structural integrity assessment in support of class surveys and steel renewal works. We deliver actionable thickness mappings and engineering documentation.",
     RU: "Ультразвуковая толщинометрия, мониторинг коррозии и оценка структурной целостности в поддержку классификационных освидетельствований и работ по замене стали. Мы предоставляем детальные карты толщин и инженерную документацию.",
   },
+
+  // NDT methods
   "activities.ut.title": { EN: "Ultrasonic Testing", RU: "Ультразвуковой контроль" },
   "activities.ut.desc": { EN: "Detects internal flaws and weld defects using high-frequency sound waves.", RU: "Обнаружение внутренних дефектов и дефектов сварных швов с помощью высокочастотных звуковых волн." },
+  "activities.ut.full": {
+    EN: "Ultrasonic Testing (UT) uses high-frequency sound waves to detect internal flaws in welds and hull structures. The technique can identify cracks, inclusions, porosity and lack of fusion without damaging the material. Our technicians are certified to perform UT in accordance with international standards and classification society requirements.",
+    RU: "Ультразвуковой контроль (УЗК) использует высокочастотные звуковые волны для обнаружения внутренних дефектов в сварных швах и конструкциях корпуса. Метод позволяет выявлять трещины, включения, пористость и непровары без повреждения материала. Наши специалисты сертифицированы для проведения УЗК в соответствии с международными стандартами и требованиями классификационных обществ.",
+  },
   "activities.mt.title": { EN: "Magnetic Particle", RU: "Магнитопорошковый контроль" },
   "activities.mt.desc": { EN: "Reveals surface and near-surface discontinuities in ferromagnetic materials.", RU: "Выявление поверхностных и приповерхностных несплошностей в ферромагнитных материалах." },
+  "activities.mt.full": {
+    EN: "Magnetic Particle Testing (MT) is used to detect surface and near-surface discontinuities in ferromagnetic materials such as steel. A magnetic field is applied to the test area, and ferromagnetic particles are distributed over the surface. Discontinuities cause the particles to gather, forming visible indications. This method is widely used in shipbuilding for weld inspection.",
+    RU: "Магнитопорошковый контроль (МПД) применяется для обнаружения поверхностных и приповерхностных несплошностей в ферромагнитных материалах, таких как сталь. На испытуемый участок подаётся магнитное поле, и ферромагнитные частицы распределяются по поверхности. Несплошности вызывают скопление частиц, образуя видимые индикации. Этот метод широко применяется в судостроении для контроля сварных швов.",
+  },
   "activities.pt.title": { EN: "Penetrant Testing", RU: "Капиллярный контроль" },
   "activities.pt.desc": { EN: "Identifies surface-breaking defects using capillary action of dye penetrants.", RU: "Выявление поверхностных дефектов с помощью капиллярного действия проникающих жидкостей." },
+  "activities.pt.full": {
+    EN: "Penetrant Testing (PT) uses the capillary action of dye penetrants to reveal surface-breaking defects. A liquid penetrant is applied to the surface, allowed to seep into any cracks or discontinuities, then excess is removed and a developer is applied to draw out the penetrant from defects, making them visible. This method is effective on both ferromagnetic and non-ferromagnetic materials.",
+    RU: "Капиллярный контроль (ПВК) использует капиллярное действие проникающих жидкостей для выявления поверхностных дефектов. Проникающая жидкость наносится на поверхность, проникает в трещины и несплошности, затем избыток удаляется и наносится проявитель, который вытягивает пенетрант из дефектов, делая их видимыми. Этот метод эффективен как для ферромагнитных, так и для неферромагнитных материалов.",
+  },
   "activities.vt.title": { EN: "Visual Inspection", RU: "Визуальный контроль" },
   "activities.vt.desc": { EN: "Systematic visual examination of welds, structures and coatings.", RU: "Систематический визуальный осмотр сварных швов, конструкций и покрытий." },
+  "activities.vt.full": {
+    EN: "Visual Testing (VT) is the most fundamental and widely used NDT method. It involves systematic visual examination of welds, structures and coatings using direct observation, aided by tools such as magnifying lenses, borescopes and cameras. VT is the first line of inspection and is essential for identifying surface defects, misalignment, and coating degradation.",
+    RU: "Визуальный контроль (ВИК) — наиболее фундаментальный и широко применяемый метод НК. Включает систематический визуальный осмотр сварных швов, конструкций и покрытий с использованием прямого наблюдения, а также инструментов — увеличительных линз, бороскопов и камер. ВИК — первая линия инспекции, необходимая для выявления поверхностных дефектов, несоосности и деградации покрытий.",
+  },
   "activities.rt.title": { EN: "Radiographic Testing", RU: "Радиографический контроль" },
   "activities.rt.desc": { EN: "X-ray and gamma-ray imaging for full volumetric weld inspection.", RU: "Рентгеновский и гамма-контроль для полной объёмной инспекции сварных швов." },
+  "activities.rt.full": {
+    EN: "Radiographic Testing (RT) uses X-rays or gamma rays to produce images of the internal structure of welds and materials. The radiation passes through the test piece and creates an image on film or a digital detector, revealing internal defects such as porosity, slag inclusions, cracks and lack of fusion. RT provides a permanent record of inspection results.",
+    RU: "Радиографический контроль (РК) использует рентгеновское или гамма-излучение для получения изображений внутренней структуры сварных швов и материалов. Излучение проходит через испытуемый объект и создаёт изображение на плёнке или цифровом детекторе, выявляя внутренние дефекты — пористость, шлаковые включения, трещины и непровары. РК обеспечивает постоянную запись результатов инспекции.",
+  },
   "activities.et.title": { EN: "Eddy Current", RU: "Вихретоковый контроль" },
   "activities.et.desc": { EN: "Electromagnetic detection of surface and sub-surface flaws in conductive materials.", RU: "Электромагнитное обнаружение поверхностных и подповерхностных дефектов в проводящих материалах." },
-  "activities.utm.thicknessTitle": { EN: "Thickness Mapping", RU: "Картирование толщин" },
-  "activities.utm.thicknessDesc": { EN: "Precise UT thickness measurement of hull plating, frames and tanks.", RU: "Точное ультразвуковое измерение толщины обшивки корпуса, набора и танков." },
-  "activities.utm.corrosionTitle": { EN: "Corrosion Analysis", RU: "Анализ коррозии" },
-  "activities.utm.corrosionDesc": { EN: "Condition Monitoring Locations and corrosion rate assessment over time.", RU: "Мониторинг состояния и оценка скорости коррозии во времени." },
-  "activities.utm.classTitle": { EN: "Class Surveys", RU: "Классификационные освидетельствования" },
-  "activities.utm.classDesc": { EN: "Support and supervision for IACS member class surveys and certification.", RU: "Поддержка и надзор за классификационными освидетельствованиями членов МАКО." },
-  "activities.utm.repairTitle": { EN: "Repair Specification", RU: "Ремонтные спецификации" },
-  "activities.utm.repairDesc": { EN: "Engineering documentation and steel renewal repair specifications.", RU: "Инженерная документация и спецификации ремонта с заменой стали." },
+  "activities.et.full": {
+    EN: "Eddy Current Testing (ET) uses electromagnetic induction to detect surface and near-surface flaws in conductive materials. An alternating current coil is placed near the test surface, inducing eddy currents in the material. Defects disrupt these currents, which is detected by the instrument. ET is particularly effective for detecting cracks in heat exchanger tubes and non-ferromagnetic materials.",
+    RU: "Вихретоковый контроль (ВТК) использует электромагнитную индукцию для обнаружения поверхностных и приповерхностных дефектов в проводящих материалах. Катушка переменного тока размещается вблизи поверхности, индуцируя вихревые токи в материале. Дефекты нарушают эти токи, что фиксируется прибором. ВТК особенно эффективен для обнаружения трещин в трубах теплообменников и неферромагнитных материалах.",
+  },
+
+  // UTM methods - updated
+  "activities.utm.utmTitle": { EN: "Ultrasonic Thickness Measurements (UTM)", RU: "Ультразвуковые измерения толщины (УЗТ)" },
+  "activities.utm.utmDesc": { EN: "Residual thickness measurement of hull structures carried out by the most popular method of UTM, in accordance with classification society rules.", RU: "Измерение остаточной толщины конструкций корпуса наиболее популярным методом УЗТ, в соответствии с правилами классификационных обществ." },
+  "activities.utm.utmFull": {
+    EN: "Pursuant to the international rules of classification societies, all vessels are subject to periodical survey in connection with the technical condition of the hull. In the course of survey, the hull is inspected for deformations, cracks or structural breaches, and the obligatory measurement of residual thickness of the hull structures. The results of survey and measurements are compared with a relevant normative value. Based on obtained results costumer receives a full picture of jobs required/recommended to be done on a board. Residual thickness of hull structures is carried out by the most popular way of UTM.\n\nOur technicians are top-ranking experts with comprehensive training and tuition received. Most of them have higher education in the field of shipbuilding and ship repair. We have all the necessary documents and certifications to operate worldwide. Inspection and survey can be carried out on a best customer preference, either pre-docking inspection or dock straight ahead in a short notice. Reporting documentation prepared accordingly, and always submitted to the customer immediately upon completion of survey.",
+    RU: "В соответствии с международными правилами классификационных обществ, все суда подлежат периодическому освидетельствованию в связи с техническим состоянием корпуса. В ходе освидетельствования корпус проверяется на деформации, трещины или нарушения конструкции, а также проводится обязательное измерение остаточной толщины конструкций корпуса. Результаты освидетельствования и измерений сравниваются с соответствующим нормативным значением. На основании полученных результатов заказчик получает полную картину необходимых/рекомендованных работ на борту. Измерение остаточной толщины конструкций корпуса проводится наиболее популярным методом УЗТ.\n\nНаши специалисты — высококвалифицированные эксперты с всесторонней подготовкой. Большинство из них имеют высшее образование в области судостроения и судоремонта. Мы имеем все необходимые документы и сертификаты для работы по всему миру. Инспекция и освидетельствование могут быть проведены по предпочтению заказчика — предстапельная инспекция или непосредственно в доке в кратчайшие сроки. Отчётная документация подготавливается соответствующим образом и всегда передаётся заказчику сразу после завершения освидетельствования.",
+  },
+  "activities.utm.repairTitle": { EN: "Repair Sketches & Steel Replacement Calculation", RU: "Ремонтные эскизы и расчёт замены стали" },
+  "activities.utm.repairDesc": { EN: "Repair sketches, suggestions and weight calculation of metal to be replaced based on ship repair technologies.", RU: "Ремонтные эскизы, предложения и расчёт массы заменяемого металла на основе технологий судоремонта." },
+  "activities.utm.repairFull": {
+    EN: "Appropriate training of technicians enables us beside from reports on the actual condition of the vessel, provide the client with repair sketches and suggestions, and calculate the weight of the metal to be replaced by reference to specific features of ship repair technologies. Pre-conducted survey of the vessel and proper calculation of weights of the structures to be replaced enables our customers to be better prepared for docking work, take into account all aspects when budgeting and to avoid pitfalls.",
+    RU: "Соответствующая подготовка наших специалистов позволяет нам, помимо отчётов о фактическом состоянии судна, предоставлять клиенту ремонтные эскизы и предложения, а также рассчитывать массу заменяемого металла с учётом особенностей судоремонтных технологий. Предварительно проведённое освидетельствование судна и корректный расчёт масс заменяемых конструкций позволяют нашим заказчикам лучше подготовиться к доковым работам, учесть все аспекты при бюджетировании и избежать непредвиденных расходов.",
+  },
+  "activities.utm.pittingTitle": { EN: "Pitting Corrosion Detection & Measurement", RU: "Обнаружение и измерение питтинговой коррозии" },
+  "activities.utm.pittingDesc": { EN: "Expert detection and measurement of pitting corrosion in ballast and cargo tanks with detailed reporting.", RU: "Экспертное обнаружение и измерение питтинговой коррозии в балластных и грузовых танках с подробной отчётностью." },
+  "activities.utm.pittingFull": {
+    EN: "Pitting corrosion or pitting wear of metal can develop on any ship structure. This issue is most common for ballast and cargo tanks. Pitting corrosion undetected and without measures taken on time can lead to costly repairs, lengthy downtime of the vessel and to environmental hazards. Our technicians have a considerable expertise in pitting corrosion research. Upon completion of inspection, they will provide a detailed report on location of the problem areas, their depth and extensiveness, together with appropriate repair suggestions based on requirements and tolerances of classification societies and IACS rules.",
+    RU: "Питтинговая коррозия или питтинговый износ металла может развиваться на любой судовой конструкции. Эта проблема наиболее характерна для балластных и грузовых танков. Необнаруженная питтинговая коррозия без своевременно принятых мер может привести к дорогостоящему ремонту, длительному простою судна и экологическим рискам. Наши специалисты обладают значительным опытом в исследовании питтинговой коррозии. По завершении инспекции они предоставят подробный отчёт о расположении проблемных зон, их глубине и распространённости, а также соответствующие предложения по ремонту на основе требований и допусков классификационных обществ и правил МАКО.",
+  },
+  "activities.utm.anchorTitle": { EN: "Anchor Chains Calibration", RU: "Калибровка якорных цепей" },
+  "activities.utm.anchorDesc": { EN: "Calibration of anchor chains to ensure total wear is within normal range per classification society requirements.", RU: "Калибровка якорных цепей для проверки допустимого износа в соответствии с требованиями классификационных обществ." },
+  "activities.utm.anchorFull": {
+    EN: "Starting from the second special survey of the vessel (10 years from the date of construction), the classification society representative may also request calibration of the anchor chain to ensure the total wear is within a normal range. Our UTM teams can perform this job both during the preliminary inspection or during dockage and prepare appropriate reports along with replacement suggestions for all parties concerned.",
+    RU: "Начиная со второго специального освидетельствования судна (10 лет с даты постройки), представитель классификационного общества может также потребовать калибровку якорной цепи для проверки того, что общий износ находится в допустимых пределах. Наши команды УЗТ могут выполнить эту работу как во время предварительной инспекции, так и во время стоянки в доке, и подготовить соответствующие отчёты вместе с предложениями по замене для всех заинтересованных сторон.",
+  },
+
+  "activities.readMore": { EN: "Read More", RU: "Подробнее" },
+  "activities.readLess": { EN: "Show Less", RU: "Свернуть" },
+
   "activities.whyLabel": { EN: "Why Choose Us", RU: "Почему мы" },
   "activities.whyTitle": { EN: "Built for fleet operators who can't afford guesswork", RU: "Создано для операторов флота, которым нельзя ошибаться" },
   "activities.why.mobilisation": { EN: "24/7 Mobilisation", RU: "Мобилизация 24/7" },
