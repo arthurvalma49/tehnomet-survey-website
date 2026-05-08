@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-symbol.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const languages = ["EN", "RU"] as const;
+const languages = ["EN", "RU", "ET"] as const;
 
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
